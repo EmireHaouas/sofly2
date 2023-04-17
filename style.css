@@ -1,0 +1,177 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  max-width: 1250px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 48px;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+  padding: 24px;
+}
+
+.grid-col {
+  /* background: red; */
+}
+
+/* HEADINGS */
+
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.header {
+  max-width: 1400px;
+  background: #437cb2;
+  padding: 12px;
+  margin: 8px auto;
+}
+
+.header-box {
+  /* background: #3f87c7; */
+  padding: 8px;
+  padding-bottom: 0.4px;
+  margin-bottom: 20px;
+}
+
+.justifyBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  background: #437cb2;
+}
+
+h3 {
+  letter-spacing: 5px;
+}
+
+ul.leaders {
+  max-width: 40em;
+  padding: 0;
+  overflow-x: hidden;
+  list-style: none;
+}
+
+ul.leaders li:before {
+  float: left;
+  width: 0;
+  white-space: nowrap;
+  content: '. . . . . . . . . . . . . . . . . . . . '
+    '. . . . . . . . . . . . . . . . . . . . '
+    '. . . . . . . . . . . . . . . . . . . . ';
+}
+ul.leaders span:first-child {
+  padding-right: 0.33em;
+  background: white;
+}
+ul.leaders span + span {
+  float: right;
+  padding-left: 0.33em;
+  background: white;
+}
+
+.horizontal-line {
+  border: 1px solid #000;
+  margin: 12px auto;
+  width: 80%;
+  height: 1px;
+}
+
+ul li {
+  color: #1a1919;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 2px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer p.note {
+  color: #bd262b;
+}
+
+@media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+
+  ul li {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+
+  ul li {
+    color: #1a1919;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 2px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 748px) {
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  ul.leaders {
+    max-width: 100%;
+  }
+}
